@@ -25,6 +25,14 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-let playerChoice = 'scissors'
-let hypocomputer = "paper"
-console.log(playRound(playerChoice, hypocomputer))
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (i = 0; i < 5; i++) {
+        (playRound(playerChoice, "scissors"));
+    }
+}
+
+let playerChoice = "Rock"
+let testPlayer = "rock"
+console.log(game())
