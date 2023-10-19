@@ -9,18 +9,7 @@ function getComputerChoice() {
 }
 
 getComputerChoice()
-
-
-
-/*//Computer returns a random option
-function computerPlay() {
-    let computerChoices = ["rock", "paper", "scissors"];
-    let computerDecision = math.random(1,2,3)
-    //let computerDecision = Math.floor(Math.random() * computerChoices.length);
-    let computerTurn = computerChoices[computerDecision];
-    return computerTurn;
-}
-
+ 
 //Plays a single round of rock, paper, scissors to determine a winner
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === "paper") {
@@ -39,6 +28,10 @@ function playRound(playerSelection, computerSelection) {
         return ("Tie Game!")
     } 
 }
+
+console.log(playRound("rock", getComputerChoice()));
+
+/*
 
 function game() {
     let playerScore = 0;
