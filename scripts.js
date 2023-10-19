@@ -13,23 +13,36 @@ getComputerChoice()
 //Plays a single round of rock, paper, scissors to determine a winner
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === "paper") {
-        return ("You lost :(")
+        return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === "scissors") {
         return ("You won :)))")
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === "scissors") {
-        return ("You lost :(")
+        return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === "rock") {
         return ("You won :)))")
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === "rock") {
-        return ("You lost :(")
+        return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === "paper") {
-        return ("You won :)))")
+        return ("You won :))). Computer Wins!")
     } else if (playerSelection.toLowerCase() === computerSelection) {
         return ("Tie Game!")
     } 
 }
 
-console.log(playRound("rock", getComputerChoice()));
+//Create a game function that runs 5 rounds
+function game() {
+    i = 0;
+    while (i < 5){
+        let user_input = prompt("Please select a choice (rock/paper/scissors)")
+        console.log(user_input)
+        let comp_choice = getComputerChoice()
+        console.log(comp_choice)
+        console.log(playRound(user_input, comp_choice));
+        i++
+    }
+}
+
+game()
 
 /*
 
