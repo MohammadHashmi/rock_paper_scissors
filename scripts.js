@@ -1,7 +1,22 @@
-//Computer returns a random option
+//Create a function that makes a computer pick either rock, paper or scissors
+function getComputerChoice() {
+    let computerChoices = ["rock", "paper", "scissors"]
+    //https://josephcardillo.medium.com/using-math-random-in-javascript-c49eff920b11 Used this to generate a random number
+    //With this random number, it will access the array of computer choices and choose the one correlating to that number. That will be the computers choice
+    let computerIndex = Math.round((Math.random() * 2))
+    let computerDecision = computerChoices[computerIndex]
+    return computerDecision
+}
+
+getComputerChoice()
+
+
+
+/*//Computer returns a random option
 function computerPlay() {
     let computerChoices = ["rock", "paper", "scissors"];
-    let computerDecision = Math.floor(Math.random() * computerChoices.length);
+    let computerDecision = math.random(1,2,3)
+    //let computerDecision = Math.floor(Math.random() * computerChoices.length);
     let computerTurn = computerChoices[computerDecision];
     return computerTurn;
 }
@@ -35,4 +50,4 @@ function game() {
 
 let playerChoice = "Rock"
 let testPlayer = "rock"
-console.log(game())
+console.log(game())*/
