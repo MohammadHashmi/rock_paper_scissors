@@ -50,7 +50,7 @@ function game() {
         console.log(playRound(user_input, comp_choice));
         i++
     }
-    
+
     //Declares a winner
     if (computerScore > userScore){
         console.log("COMPUTER WINS !!!!!!!!!")
@@ -65,16 +65,3 @@ function game() {
 
 game()
 
-/*
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (i = 0; i < 5; i++) {
-        (playRound(playerChoice, "scissors"));
-    }
-}
-
-let playerChoice = "Rock"
-let testPlayer = "rock"
-console.log(game())*/
