@@ -50,7 +50,6 @@ function game() {
         console.log(playRound(user_input, comp_choice));
         i++
     }
-
     //Declares a winner
     if (computerScore > userScore){
         console.log("COMPUTER WINS !!!!!!!!!")
@@ -59,9 +58,8 @@ function game() {
         console.log("YOUUUUUU WINNNNNNN")
     }
     else {
-        console.log("TIE GAME")
+        console.log("TIE")
     }
 }
 
 game()
-
