@@ -9,21 +9,31 @@ function getComputerChoice() {
 }
 
 getComputerChoice()
+
+//Variables to keep track of score
+computerScore = 0
+userScore = 0
  
 //Plays a single round of rock, paper, scissors to determine a winner
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === "paper") {
+        computerScore++
         return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === "scissors") {
+        userScore++
         return ("You won :)))")
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === "scissors") {
+        computerScore++
         return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === "rock") {
+        userScore++
         return ("You won :)))")
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === "rock") {
+        computerScore++
         return ("You lost :(. Computer Wins!")
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === "paper") {
-        return ("You won :))). Computer Wins!")
+        userScore++
+        return ("You won :))).")
     } else if (playerSelection.toLowerCase() === computerSelection) {
         return ("Tie Game!")
     } 
@@ -39,6 +49,17 @@ function game() {
         console.log(comp_choice)
         console.log(playRound(user_input, comp_choice));
         i++
+    }
+    
+    //Declares a winner
+    if (computerScore > userScore){
+        console.log("COMPUTER WINS !!!!!!!!!")
+    }
+    else if (userScore > computerScore) {
+        console.log("YOUUUUUU WINNNNNNN")
+    }
+    else {
+        console.log("TIE GAME")
     }
 }
 
